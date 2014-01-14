@@ -5,19 +5,19 @@
      <transform rotation="1 0 0 1.57079632">
         <Group DEF='Z_AXIS'>
              <transform translation="0 8 0" rotation="0 0 0 0" scale="1 2 1">
-                <shape DEF='coneShape'>
+                <shape DEF='coneShapeZ'>
                   <appearance>
                     <Material diffuseColor="0 0 1" specularColor=".5 .5 .5" />
                   </appearance>
-                  <Cone DEF="cone" bottomRadius="0.25" height=".5" />
+                  <Cone DEF="coneZ" bottomRadius="0.25" height=".5" />
                 </shape>
               </transform>
               <transform translation="0 4 0" rotation="0 0 0 0" scale="1 4 1">
-                <shape DEF='cylinderShape'>
+                <shape DEF='cylinderShapeZ'>
                   <appearance>
                     <Material diffuseColor="0 0 1" specularColor=".5 .5 .5" />
                   </appearance>
-                  <Cylinder DEF="cylinder" radius=".05" height="2.0" />
+                  <Cylinder DEF="cylinderZ" radius=".05" height="2.0" />
                 </shape>
               </transform>
         </Group>

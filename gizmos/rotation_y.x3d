@@ -5,11 +5,11 @@
        <transform translation="0 6 0" rotation="1 0 0 -1.57079632">
             <Group DEF='Y_AXIS'>
                   <transform translation="0 0 0" rotation="0 0 0 0" scale="1 1 1">
-                    <shape DEF='torusShape'>
+                    <shape DEF='torusShapeY'>
                       <appearance>
                         <Material diffuseColor="0 1 0" specularColor=".5 .5 .5" />
                       </appearance>
-                      <torus DEF="torus" innerRadius="0.05" outerRadius="0.5" />
+                      <torus DEF="torusY" innerRadius="0.05" outerRadius="0.5" />
                     </shape>
                   </transform>
             </Group>

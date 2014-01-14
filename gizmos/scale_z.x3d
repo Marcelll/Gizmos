@@ -5,11 +5,11 @@
        <transform>
             <Group DEF='Z_AXIS'>
                  <transform translation="0 0 6.75" rotation="0 0 0 0" scale="1 1 1">
-                    <shape DEF='boxShape'>
+                    <shape DEF='boxShapeZ'>
                       <appearance>
                         <Material diffuseColor="0 0 1" specularColor=".5 .5 .5" />
                       </appearance>
-                      <Box DEF="box" size=".5 .5 .5" />
+                      <Box DEF="boxZ" size=".5 .5 .5" />
                     </shape>
                   </transform>
             </Group>
