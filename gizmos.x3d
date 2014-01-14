@@ -2,48 +2,48 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
 <X3D xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' profile='Full' version='3.0' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
   <Scene DEF='scene'>
-      <matrixtransform DEF='TRANSFORMATION'>
+      <transform DEF='TRANSFORMATION'>
             <Group DEF='AXIS_GIZMOS'>
                 <transform>
                      <Group DEF='GIZMOS_Y'>
                         <transform>
-                            <inline DEF='translationY' onclick='createInteractor("Interactor_Test");' nameSpaceName="transY" mapDefToId="true" url="gizmos/translation_y.x3d"></inline>
+                            <inline DEF='translationY' onclick='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="transY" mapDefToId="true" url="gizmos/translation_y.x3d"></inline>
                         </transform>
                         <transform>
-                            <inline DEF='rotationY' onclick='createInteractor("Interactor_Test");'nameSpaceName="rotY" mapDefToId="true" url="gizmos/rotation_y.x3d"></inline>
+                            <inline DEF='rotationY' onclick='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="rotY" mapDefToId="true" url="gizmos/rotation_y.x3d"></inline>
                         </transform>
                         <transform>
-                            <inline DEF='scalingY' onclick='createInteractor("Interactor_Test");'nameSpaceName="scaleY" mapDefToId="true" url="gizmos/scale_y.x3d"></inline>
+                            <inline DEF='scalingY' onclick='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="scaleY" mapDefToId="true" url="gizmos/scale_y.x3d"></inline>
                         </transform>
                      </Group>
                  </transform>
                  <transform>
                     <Group DEF='GIZMOS_X'>
                         <transform>
-                            <inline DEF='translationX' onclick='createInteractor("Interactor_Test");'nameSpaceName="transX" mapDefToId="true" url="gizmos/translation_x.x3d"></inline>
+                            <inline DEF='translationX' onclick='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="transX" mapDefToId="true" url="gizmos/translation_x.x3d"></inline>
                         </transform>
                         <transform>
-                            <inline DEF='rotationX' onclick='createInteractor("Interactor_Test");'nameSpaceName="rotX" mapDefToId="true" url="gizmos/rotation_x.x3d"></inline>
+                            <inline DEF='rotationX' onclick='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="rotX" mapDefToId="true" url="gizmos/rotation_x.x3d"></inline>
                         </transform>
                         <transform>
-                            <inline DEF='scalingX' onclick='createInteractor("Interactor_Test");'nameSpaceName="scaleX" mapDefToId="true" url="gizmos/scale_x.x3d"></inline>
+                            <inline DEF='scalingX' onclick='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="scaleX" mapDefToId="true" url="gizmos/scale_x.x3d"></inline>
                         </transform>
                     </Group>
                  </transform>
                  <transform>
                      <Group DEF='GIZMOS_Z'>
                         <transform>
-                            <inline DEF='translationZ' onclick='createInteractor("Interactor_Test");'nameSpaceName="transZ" mapDefToId="true" url="gizmos/translation_z.x3d"></inline>
+                            <inline DEF='translationZ' onclick='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="transZ" mapDefToId="true" url="gizmos/translation_z.x3d"></inline>
                         </transform>
                         <transform>
-                            <inline DEF='rotationZ' onclick='createInteractor("Interactor_Test");'nameSpaceName="rotZ" mapDefToId="true" url="gizmos/rotation_z.x3d"></inline>
+                            <inline DEF='rotationZ' onclick='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="rotZ" mapDefToId="true" url="gizmos/rotation_z.x3d"></inline>
                         </transform>
                         <transform>
-                            <inline DEF='scalingZ' onclick='createInteractor("Interactor_Test");'nameSpaceName="scaleZ" mapDefToId="true" url="gizmos/scale_z.x3d"></inline>
+                            <inline DEF='scalingZ' onclick='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="scaleZ" mapDefToId="true" url="gizmos/scale_z.x3d"></inline>
                         </transform>
                      </Group>
                  </transform>
             </Group>
-        </matrixtransform>
+        </transform>
   </Scene>
 </X3D>
