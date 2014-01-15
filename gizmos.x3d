@@ -7,13 +7,13 @@
                 <transform>
                      <Group DEF='GIZMOS_Y'>
                         <transform>
-                            <inline DEF='translationY' onclick='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="transY" mapDefToId="true" url="gizmos/translation_y.x3d"></inline>
+                            <inline DEF='translationY' onclick='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="translationY" mapDefToId="true" url="gizmos/translation_y.x3d"></inline>
                         </transform>
                         <transform>
-                            <inline DEF='rotationY' onclick='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="rotY" mapDefToId="true" url="gizmos/rotation_y.x3d"></inline>
+                            <inline DEF='rotationY' onclick='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="rotationY" mapDefToId="true" url="gizmos/rotation_y.x3d"></inline>
                         </transform>
                         <transform>
-                            <inline DEF='scalingY' onclick='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="scaleY" mapDefToId="true" url="gizmos/scale_y.x3d"></inline>
+                            <inline DEF='scalingY' onclick='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="scalingY" mapDefToId="true" url="gizmos/scale_y.x3d"></inline>
                         </transform>
                      </Group>
                  </transform>

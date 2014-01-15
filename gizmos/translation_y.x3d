@@ -13,9 +13,9 @@
                     </shape>
                   </transform>
                   <transform translation="0 4 0" rotation="0 0 0 0" scale="1 4 1">
-                    <shape DEF='cylinderShapeY'>
+                    <shape>
                       <appearance>
-                        <Material diffuseColor="0 1 0" specularColor=".5 .5 .5" />
+                        <Material id='highlight' diffuseColor="0 1 0" specularColor=".5 .5 .5" />
                       </appearance>
                       <Cylinder DEF="cylinderY" radius=".05" height="2.0" />
                     </shape>
