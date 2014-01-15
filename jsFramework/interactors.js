@@ -19,7 +19,7 @@ Core.Interactors.BaseInteractor.prototype.Super = function() {
     this.drag           = false;
     this.mousePos       = {x: 0, y: 0};
     this.defaultCol     = this.elementMat.getAttribute("diffuseColor");
-    this.highlightCol   = "0 1 1";
+    this.highlightCol   = "1 0.8 0.0";
     this.interactor     = this;
 };
 
@@ -72,6 +72,7 @@ Core.Interactors.BaseInteractor.prototype.x3dMouseMove = function(evt) {
 
 Core.Interactors.BaseInteractor.prototype.x3dMouseUp = function(evt) {
     this.interactor.RemoveEventListeners();
+    this.interactor.elementMat.setAttribute("diffuseColor", this.interactor.defaultCol);
 };
 
 Core.Interactors.BaseInteractor.prototype.transformation = function(evt) {

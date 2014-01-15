@@ -7,7 +7,7 @@
              <transform translation="0 8 0" rotation="0 0 0 0" scale="1 2 1">
                 <shape DEF='coneShapeZ'>
                   <appearance>
-                    <Material diffuseColor="0 0 1" specularColor=".5 .5 .5" />
+                    <Material id='highlight' diffuseColor="0 0 1" specularColor=".5 .5 .5" />
                   </appearance>
                   <Cone DEF="coneZ" bottomRadius="0.25" height=".5" />
                 </shape>
@@ -15,7 +15,7 @@
               <transform translation="0 4 0" rotation="0 0 0 0" scale="1 4 1">
                 <shape DEF='cylinderShapeZ'>
                   <appearance>
-                    <Material DEF='highlight' diffuseColor="0 0 1" specularColor=".5 .5 .5" />
+                    <Material diffuseColor="0 0 1" specularColor=".5 .5 .5" />
                   </appearance>
                   <Cylinder DEF="cylinderZ" radius=".05" height="2.0" />
                 </shape>
