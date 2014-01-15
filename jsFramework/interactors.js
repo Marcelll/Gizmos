@@ -82,12 +82,202 @@ Core.Interactors.BaseInteractor.prototype.transformation = function(evt) {
 
 
 
-Core.Interactors.Interactor_Test = function(){
-    //console.log("test");
+Core.Interactors.Interactor_Test = function(evt){
+    
+//    var parameters = {Minimum: 0.0, Maximum: 100.0, Snap: 5.0};
+//    
+//    this.transformation = function(evt){
+//        var transOld = x3dom.fields.SFVec3f.parse(this.transform.getAttribute("translation"));
+//        var translationDir = this.mousePos.x - evt.layerX;
+//        var snapped = false;
+//        if ((translationDir > 0 && transOld.x < parameters.Maximum) || 
+//            (translationDir < 0 && transOld.x > parameters.Minimum)){
+//            transOld.x += translationDir / 50;
+//            if (transOld.x <= parameters.Minimum + parameters.Snap) { 
+//                transOld.x = parameters.Minimum;
+//                snapped = true;
+//            }
+//            if (transOld.x >= parameters.Maximum - parameters.Snap) { 
+//                transOld.x = parameters.Maximum;
+//                snapped = true;
+//            }
+//            this.transform.setAttribute("translation", transOld.toString());
+//        }
+//        if (!snapped)
+//            this.mousePos.x = evt.layerX;
+//    };
+    
+    
+
+    this.transformation = function(evt){
+        var transOld = x3dom.fields.SFVec3f.parse(this.transform.getAttribute("translation"));
+        var translationDir = this.mousePos.x - evt.layerX;
+        if ((translationDir > 0) || 
+            (translationDir <= 0)){
+            transOld.x += translationDir / 100;
+            this.transform.setAttribute("translation", transOld.toString());
+        }
+        this.mousePos.x = evt.layerX;
+    };
+    
+    
+//    if (this.parameters.Minimum === undefined) this.parameters.Minimum = 0.0;
+//    if (this.parameters.Maximum === undefined) this.parameters.Maximum = 1.0;
+//    if (this.parameters.Snap === undefined) this.parameters.Snap = 0.0;
+//    
+//    this.transform = function(evt){
+//        var transOld = x3dom.fields.SFVec3f.parse(this.transform.getAttribute("translation"));
+//        var translationDir = this.mousePos.x - evt.layerX;
+//        var snapped = false;
+//        if ((translationDir > 0 && transOld.x < this.parameters.Maximum) || 
+//            (translationDir < 0 && transOld.x > this.parameters.Minimum)){
+//            transOld.x += translationDir / 50;
+//            if (transOld.x <= this.parameters.Minimum + this.parameters.Snap) { 
+//                transOld.x = this.parameters.Minimum;
+//                snapped = true;
+//            }
+//            if (transOld.x >= this.parameters.Maximum - this.parameters.Snap) { 
+//                transOld.x = this.parameters.Maximum;
+//                snapped = true;
+//            }
+//            this.transform.setAttribute("translation", transOld.toString());
+//        }
+//        if (!snapped)
+//            this.mousePos.x = evt.layerX;
+//    };
+
 };
+
+Core.Interactors.Interactor_Test = function(evt){
+    
+//    var parameters = {Minimum: 0.0, Maximum: 100.0, Snap: 5.0};
+//    
+//    this.transformation = function(evt){
+//        var transOld = x3dom.fields.SFVec3f.parse(this.transform.getAttribute("translation"));
+//        var translationDir = this.mousePos.x - evt.layerX;
+//        var snapped = false;
+//        if ((translationDir > 0 && transOld.x < parameters.Maximum) || 
+//            (translationDir < 0 && transOld.x > parameters.Minimum)){
+//            transOld.x += translationDir / 50;
+//            if (transOld.x <= parameters.Minimum + parameters.Snap) { 
+//                transOld.x = parameters.Minimum;
+//                snapped = true;
+//            }
+//            if (transOld.x >= parameters.Maximum - parameters.Snap) { 
+//                transOld.x = parameters.Maximum;
+//                snapped = true;
+//            }
+//            this.transform.setAttribute("translation", transOld.toString());
+//        }
+//        if (!snapped)
+//            this.mousePos.x = evt.layerX;
+//    };
+    
+    
+
+//    this.transformation = function(evt){
+//        var transOld = x3dom.fields.SFVec3f.parse(this.transform.getAttribute("translation"));
+//        var translationDir = this.mousePos.x - evt.layerX;
+//        if ((translationDir > 0) || 
+//            (translationDir <= 0)){
+//            transOld.x += translationDir / 100;
+//            this.transform.setAttribute("translation", transOld.toString());
+//        }
+//        this.mousePos.x = evt.layerX;
+//    };
+    
+    console.log("There's no functionality implemented for this interactor!");
+    
+//    if (this.parameters.Minimum === undefined) this.parameters.Minimum = 0.0;
+//    if (this.parameters.Maximum === undefined) this.parameters.Maximum = 1.0;
+//    if (this.parameters.Snap === undefined) this.parameters.Snap = 0.0;
+//    
+//    this.transform = function(evt){
+//        var transOld = x3dom.fields.SFVec3f.parse(this.transform.getAttribute("translation"));
+//        var translationDir = this.mousePos.x - evt.layerX;
+//        var snapped = false;
+//        if ((translationDir > 0 && transOld.x < this.parameters.Maximum) || 
+//            (translationDir < 0 && transOld.x > this.parameters.Minimum)){
+//            transOld.x += translationDir / 50;
+//            if (transOld.x <= this.parameters.Minimum + this.parameters.Snap) { 
+//                transOld.x = this.parameters.Minimum;
+//                snapped = true;
+//            }
+//            if (transOld.x >= this.parameters.Maximum - this.parameters.Snap) { 
+//                transOld.x = this.parameters.Maximum;
+//                snapped = true;
+//            }
+//            this.transform.setAttribute("translation", transOld.toString());
+//        }
+//        if (!snapped)
+//            this.mousePos.x = evt.layerX;
+//    };
+};
+
+
 Core.Interactors.Interactor_Test.prototype = new Core.Interactors.BaseInteractor();
 Core.Interactors.Interactor_Test.prototype.constructor = Core.Interactors.Interactor_Test;
 
 Core.Interactors.Interactor_Test.prototype.transformation = function(evt){
+    console.log("The function transformation has been overwritten successfully!");
+};
+
+Core.Interactors.XTranslator = function(evt){
+    this.transformation = function(evt){
+        var transOld = x3dom.fields.SFVec3f.parse(this.transform.getAttribute("translation"));
+        var translationDir = this.mousePos.x - evt.layerX;
+        if ((translationDir > 0) || 
+            (translationDir <= 0)){
+            transOld.x += translationDir / 100;
+            this.transform.setAttribute("translation", transOld.toString());
+        }
+        this.mousePos.x = evt.layerX;
+    };
+};
+
+Core.Interactors.XTranslator.prototype = new Core.Interactors.BaseInteractor();
+Core.Interactors.XTranslator.prototype.constructor = Core.Interactors.Interactor_Test;
+
+Core.Interactors.XTranslator.prototype.transformation = function(evt){
+    console.log("The function transformation has been overwritten successfully!");
+};
+
+Core.Interactors.YTranslator = function(evt){
+    this.transformation = function(evt){
+        var transOld = x3dom.fields.SFVec3f.parse(this.transform.getAttribute("translation"));
+        var translationDir = this.mousePos.y - evt.layerY;
+        if ((translationDir > 0) || 
+            (translationDir <= 0)){
+            transOld.y += translationDir / 100;
+            this.transform.setAttribute("translation", transOld.toString());
+        }
+        this.mousePos.y = evt.layerY;
+    };
+};
+
+Core.Interactors.YTranslator.prototype = new Core.Interactors.BaseInteractor();
+Core.Interactors.YTranslator.prototype.constructor = Core.Interactors.Interactor_Test;
+
+Core.Interactors.YTranslator.prototype.transformation = function(evt){
+    console.log("The function transformation has been overwritten successfully!");
+};
+
+Core.Interactors.ZTranslator = function(evt){
+    this.transformation = function(evt){
+        var transOld = x3dom.fields.SFVec3f.parse(this.transform.getAttribute("translation"));
+        var translationDir = this.mousePos.x - evt.layerX;
+        if ((translationDir > 0) || 
+            (translationDir <= 0)){
+            transOld.z += translationDir / 100;
+            this.transform.setAttribute("translation", transOld.toString());
+        }
+        this.mousePos.x = evt.layerX;
+    };
+};
+
+Core.Interactors.ZTranslator.prototype = new Core.Interactors.BaseInteractor();
+Core.Interactors.ZTranslator.prototype.constructor = Core.Interactors.Interactor_Test;
+
+Core.Interactors.ZTranslator.prototype.transformation = function(evt){
     console.log("The function transformation has been overwritten successfully!");
 };

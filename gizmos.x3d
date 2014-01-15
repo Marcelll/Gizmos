@@ -4,23 +4,10 @@
   <Scene DEF='scene'>
       <transform DEF='TRANSFORMATION'>
             <Group DEF='AXIS_GIZMOS'>
-                <transform>
-                     <Group DEF='GIZMOS_Y'>
-                        <transform>
-                            <inline DEF='translationY' onmousedown='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="translationY" mapDefToId="true" url="gizmos/translation_y.x3d"></inline>
-                        </transform>
-                        <transform>
-                            <inline DEF='rotationY' onmousedown='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="rotationY" mapDefToId="true" url="gizmos/rotation_y.x3d"></inline>
-                        </transform>
-                        <transform>
-                            <inline DEF='scaleY' onmousedown='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="scaleY" mapDefToId="true" url="gizmos/scale_y.x3d"></inline>
-                        </transform>
-                     </Group>
-                 </transform>
-                 <transform>
+               <transform>
                     <Group DEF='GIZMOS_X'>
                         <transform>
-                            <inline DEF='translationX' onmousedown='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="translationX" mapDefToId="true" url="gizmos/translation_x.x3d"></inline>
+                            <inline DEF='translationX' onmousedown='Core.CreateInteractor({interactor: "Core.Interactors.XTranslator", id: this.id});' nameSpaceName="translationX" mapDefToId="true" url="gizmos/translation_x.x3d"></inline>
                         </transform>
                         <transform>
                             <inline DEF='rotationX' onmousedown='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="rotationX" mapDefToId="true" url="gizmos/rotation_x.x3d"></inline>
@@ -29,19 +16,32 @@
                             <inline DEF='scaleX' onmousedown='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="scaleX" mapDefToId="true" url="gizmos/scale_x.x3d"></inline>
                         </transform>
                     </Group>
+                </transform>
+                <transform>
+                    <Group DEF='GIZMOS_Y'>
+                       <transform>
+                           <inline DEF='translationY' onmousedown='Core.CreateInteractor({interactor: "Core.Interactors.YTranslator", id: this.id});' nameSpaceName="translationY" mapDefToId="true" url="gizmos/translation_y.x3d"></inline>
+                       </transform>
+                       <transform>
+                           <inline DEF='rotationY' onmousedown='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="rotationY" mapDefToId="true" url="gizmos/rotation_y.x3d"></inline>
+                       </transform>
+                       <transform>
+                           <inline DEF='scaleY' onmousedown='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="scaleY" mapDefToId="true" url="gizmos/scale_y.x3d"></inline>
+                       </transform>
+                    </Group>
                  </transform>
                  <transform>
-                     <Group DEF='GIZMOS_Z'>
-                        <transform>
-                            <inline DEF='translationZ' onmousedown='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="translationZ" mapDefToId="true" url="gizmos/translation_z.x3d"></inline>
-                        </transform>
-                        <transform>
-                            <inline DEF='rotationZ' onmousedown='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="rotationZ" mapDefToId="true" url="gizmos/rotation_z.x3d"></inline>
-                        </transform>
-                        <transform>
-                            <inline DEF='scaleZ' onmousedown='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="scaleZ" mapDefToId="true" url="gizmos/scale_z.x3d"></inline>
-                        </transform>
-                     </Group>
+                    <Group DEF='GIZMOS_Z'>
+                       <transform>
+                           <inline DEF='translationZ' onmousedown='Core.CreateInteractor({interactor: "Core.Interactors.ZTranslator", id: this.id});' nameSpaceName="translationZ" mapDefToId="true" url="gizmos/translation_z.x3d"></inline>
+                       </transform>
+                       <transform>
+                           <inline DEF='rotationZ' onmousedown='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="rotationZ" mapDefToId="true" url="gizmos/rotation_z.x3d"></inline>
+                       </transform>
+                       <transform>
+                           <inline DEF='scaleZ' onmousedown='Core.CreateInteractor({interactor: "Core.Interactors.Interactor_Test", id: this.id});' nameSpaceName="scaleZ" mapDefToId="true" url="gizmos/scale_z.x3d"></inline>
+                       </transform>
+                    </Group>
                  </transform>
             </Group>
         </transform>
