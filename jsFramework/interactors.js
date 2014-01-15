@@ -20,7 +20,6 @@ Core.Interactors.BaseInteractor.prototype.Super = function() {
     this.mousePos       = {x: 0, y: 0};
     this.defaultCol     = this.elementMat.getAttribute("diffuseColor");
     this.highlightCol   = "1 0.8 0.0";
-    this.interactor     = this;
 };
 
 Core.Interactors.BaseInteractor.prototype.AddEventListeners = function() {
