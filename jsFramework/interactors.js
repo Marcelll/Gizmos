@@ -236,7 +236,7 @@ Core.Interactors.XTranslator = function(evt){
 };
 
 Core.Interactors.XTranslator.prototype = new Core.Interactors.BaseInteractor();
-Core.Interactors.XTranslator.prototype.constructor = Core.Interactors.Interactor_Test;
+Core.Interactors.XTranslator.prototype.constructor = Core.Interactors.XTranslator;
 
 Core.Interactors.XTranslator.prototype.transformation = function(evt){
     console.log("The function transformation has been overwritten successfully!");
@@ -245,18 +245,18 @@ Core.Interactors.XTranslator.prototype.transformation = function(evt){
 Core.Interactors.YTranslator = function(evt){
     this.transformation = function(evt){
         var transOld = x3dom.fields.SFVec3f.parse(this.transform.getAttribute("translation"));
-        var translationDir = this.mousePos.y - evt.layerY;
+        var translationDir = this.mousePos.x - evt.layerX;
         if ((translationDir > 0) || 
             (translationDir <= 0)){
             transOld.y += translationDir / 100;
             this.transform.setAttribute("translation", transOld.toString());
         }
-        this.mousePos.y = evt.layerY;
+        this.mousePos.x = evt.layerX;
     };
 };
 
 Core.Interactors.YTranslator.prototype = new Core.Interactors.BaseInteractor();
-Core.Interactors.YTranslator.prototype.constructor = Core.Interactors.Interactor_Test;
+Core.Interactors.YTranslator.prototype.constructor = Core.Interactors.YTranslator;
 
 Core.Interactors.YTranslator.prototype.transformation = function(evt){
     console.log("The function transformation has been overwritten successfully!");
@@ -276,8 +276,74 @@ Core.Interactors.ZTranslator = function(evt){
 };
 
 Core.Interactors.ZTranslator.prototype = new Core.Interactors.BaseInteractor();
-Core.Interactors.ZTranslator.prototype.constructor = Core.Interactors.Interactor_Test;
+Core.Interactors.ZTranslator.prototype.constructor = Core.Interactors.ZTranslator;
 
 Core.Interactors.ZTranslator.prototype.transformation = function(evt){
+    console.log("The function transformation has been overwritten successfully!");
+};
+
+Core.Interactors.XRotator = function(evt){   
+    this.transformation = function(evt){
+        var transOld = x3dom.fields.SFVec4f.parse(this.transform.getAttribute("rotation"));
+        var translationDir = -Math.floor((this.mousePos.x - evt.layerX)) / 180 * Math.PI;
+        transOld.x = 1;
+        transOld.y = 0;
+        transOld.z = 0;
+        transOld.w += translationDir;
+        this.transform.setAttribute("rotation", transOld.toString());
+        //if (this.parameters.Center !== undefined)
+        //    this.transform.setAttribute("center", new x3dom.fields.SFVec3f(this.parameters.Center.x, this.parameters.Center.y, this.parameters.Center.z));
+        this.mousePos.x = evt.layerX;
+    };
+};
+
+Core.Interactors.XRotator.prototype = new Core.Interactors.BaseInteractor();
+Core.Interactors.XRotator.prototype.constructor = Core.Interactors.XRotator;
+
+Core.Interactors.XRotator.prototype.transformation = function(evt){
+    console.log("The function transformation has been overwritten successfully!");
+};
+
+Core.Interactors.YRotator = function(evt){   
+    this.transformation = function(evt){
+        var transOld = x3dom.fields.SFVec4f.parse(this.transform.getAttribute("rotation"));
+        var translationDir = -Math.floor((this.mousePos.x - evt.layerX)) / 180 * Math.PI;
+        transOld.x = 0;
+        transOld.y = 1;
+        transOld.z = 0;
+        transOld.w += translationDir;
+        this.transform.setAttribute("rotation", transOld.toString());
+        //if (this.parameters.Center !== undefined)
+        //    this.transform.setAttribute("center", new x3dom.fields.SFVec3f(this.parameters.Center.x, this.parameters.Center.y, this.parameters.Center.z));
+        this.mousePos.x = evt.layerX;
+    };
+};
+
+Core.Interactors.YRotator.prototype = new Core.Interactors.BaseInteractor();
+Core.Interactors.YRotator.prototype.constructor = Core.Interactors.YRotator;
+
+Core.Interactors.YRotator.prototype.transformation = function(evt){
+    console.log("The function transformation has been overwritten successfully!");
+};
+
+Core.Interactors.ZRotator = function(evt){   
+    this.transformation = function(evt){
+        var transOld = x3dom.fields.SFVec4f.parse(this.transform.getAttribute("rotation"));
+        var translationDir = -Math.floor((this.mousePos.x - evt.layerX)) / 180 * Math.PI;
+        transOld.x = 0;
+        transOld.y = 0;
+        transOld.z = 1;
+        transOld.w += translationDir;
+        this.transform.setAttribute("rotation", transOld.toString());
+        //if (this.parameters.Center !== undefined)
+        //    this.transform.setAttribute("center", new x3dom.fields.SFVec3f(this.parameters.Center.x, this.parameters.Center.y, this.parameters.Center.z));
+        this.mousePos.x = evt.layerX;
+    };
+};
+
+Core.Interactors.ZRotator.prototype = new Core.Interactors.BaseInteractor();
+Core.Interactors.ZRotator.prototype.constructor = Core.Interactors.ZRotator;
+
+Core.Interactors.ZRotator.prototype.transformation = function(evt){
     console.log("The function transformation has been overwritten successfully!");
 };

@@ -4,15 +4,56 @@
   <Scene DEF='scene'>
        <transform translation="6 0 0" rotation="0 1 0 1.57079632">
             <Group DEF='X_AXIS'>
-                  <transform translation="0 0 0" rotation="0 0 0 0" scale="1 1 1">
+                <transform translation="0 0 0" rotation="0 0 0 0" scale="1 1 1">
                     <shape DEF='torusShapeX'>
                       <appearance>
-                        <Material id='highlight' diffuseColor="1 0 0" specularColor=".5 .5 .5" />
+                        <material id='highlight' diffuseColor="1 0 0" specularColor=".5 .5 .5" />
                       </appearance>
                       <torus DEF="torusX" innerRadius="0.05" outerRadius="0.5" />
                     </shape>
-                  </transform>
+                </transform>
+<!--                <transform translation="0 0 0" rotation="0 0 0 0" scale="1 1 1">
+                    <shape DEF="sphereShapeX">
+                      <appearance DEF="sphereAppX">
+                        <material id='highlight' diffuseColor="1 0 0" specularColor=".5 .5 .5" />
+                      </appearance>
+                      <sphere DEF="sphereX" radius="0.3" />
+                    </shape>
+                </transform>-->
+<!--                <transform translation="-1 0.25 0" rotation="0 0 1 1.57079632" scale="1 1 1">
+                    <shape>
+                      <appearance>
+                        <material ambientIntensity='0.0933' diffuseColor='1 0 0' shininess='0.51' specularColor='0.5 0.5 0.5'></material>
+                      </appearance>
+                      <text string='0°' solid='false'>
+                          <fontstyle family="TYPEWRITER" style="BOLDITALIC" size="0.8"></fontstyle>
+                      </text>
+                    </shape>
+                </transform>-->
             </Group>
         </transform>
   </Scene>
 </X3D>
+
+<!--<x3d width="392px" height="392px">
+    <scene>
+      <viewpoint position='0 0 11'></viewpoint>
+      <background skyColor='0.5 0.5 0.5'></background>
+      <shape>
+        <appearance>
+          <material ambientIntensity='0.0933' diffuseColor='0.32 0.54 0.26' shininess='0.51' specularColor='0.46 0.46 0.46'></material>
+        </appearance>
+        <text string='Mono bolditalic 32px' solid='false'>
+            <fontstyle family="TYPEWRITER" style="BOLDITALIC" size="0.8"></fontstyle>
+        </text>
+      </shape>
+      <transform translation='0 0 -2'>
+        <shape>
+            <appearance> 
+                <material diffuseColor="1 0 0" specularColor="0.5 0.5 0.5"></material>
+            </appearance>
+            <box></box>
+        </shape>
+      </transform>
+    </scene>
+    </x3d>-->

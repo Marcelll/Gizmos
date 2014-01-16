@@ -11,28 +11,93 @@
     
     <!-- X3DOM -->
     <link rel="stylesheet" type="text/css" href="http://www.x3dom.org/download/x3dom.css" /> 
+    <link rel='stylesheet' type='text/css' href='media/css/examples.css'>
+    <link rel='stylesheet' type='text/css' href='media/font/orbitron.css'>
     <script type="text/javascript" src="http://www.x3dom.org/download/dev/x3dom.js"></script>
-    
+    <style>
+        x3d { margin-right:10px; margin-bottom:10px; }
+        .webfont {font-family:'Orbitron';}
+        .component {
+            float:left; 
+            width: 80px; 
+            height: 80px; 
+            margin: 5px; 
+            border: solid 3px lightgray;
+        }
+        
+        .component:hover {
+            border: solid 3px darkorange;
+            cursor: pointer;
+        }
+    </style>
+    <script type="text/javascript">
+
+        function createGizmo(){
+            var url = "gizmos.x3d";              
+            var inline = document.createElement("Inline");
+            inline.setAttribute("id", "gizmo");
+            inline.setAttribute("url", url);
+            inline.setAttribute("nameSpaceName", "gizmo");
+            inline.setAttribute("mapDefToID", true);
+            inline.setAttribute("render", true);
+            var scene = document.getElementById("scene");
+            scene.appendChild(inline);
+            };
+            
+         function createCube(){
+            var url = "models/cube/standard.x3d";              
+            var inline = document.createElement("Inline");
+            inline.setAttribute("url", url);
+            inline.setAttribute("nameSpaceName", "cube");
+            inline.setAttribute("mapDefToID", true);
+            inline.setAttribute("render", true);
+            var scene = document.getElementById("scene");
+            scene.appendChild(inline);
+            };
+
+    </script>
+
+
     <!-- INTERNALS -->
     <script type="text/javascript" src="jsFramework/core.js"></script>
     <script type="text/javascript" src="jsFramework/interactors.js"></script>
     <script type="text/javascript" src="jsFramework/util.js"></script>
+    <style>
+        
+        .component {
+            float:left; 
+            width: 80px; 
+            height: 80px; 
+            margin: 5px; 
+            border: solid 3px lightgray;
+        }
+        
+        .component:hover {
+            border: solid 3px darkorange;
+            cursor: pointer;
+        }
+    </style>
+
 </head>
     
 <body>
-
     <x3d id="x3d" width="800" height="600">
-        <scene>
+        <scene id="scene" DEF='scene' style="float:left;">
             <NavigationInfo type="examine"></navigationinfo>
             <Viewpoint position="17.47922 15.18714 5.76324" orientation="0.27693 0.61847 0.73539 2.44366" 
                        zNear="0.1" zFar="10000" description="defaultX3DViewpointNode">
             </Viewpoint>
             
             
-            <inline id="gizmo" render="true" nameSpaceName="gizmo" mapDefToId="true" url="gizmos.x3d"></inline>
+            <!--<inline id="gizmo" render="true" nameSpaceName="gizmo" mapDefToId="true" url="gizmos.x3d"></inline>-->
         </scene>
     </x3d>
-    
+    <div style="float:left; width: 200px; height: 350px; background-color: lightgray; border: solid 1px #414141; margin-left: 2px;">
+        <div style="float:left; width: 90%; height: 20px; background-color: #414141; padding: 10px; font-family: Calibri; font-size: 18px; color: #fff;">Component Browser</div>
+        <img src="models/cube/cube.jpg" class="component" onclick="createCube();"/>
+        <img src="gizmos.jpg" class="component" onclick="createGizmo();"/>
+<!--        <img src="desk.jpg" class="component" onclick="createDesk();"/>-->
+    </div>
 </body>
 
 </html>
