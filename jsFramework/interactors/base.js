@@ -1,7 +1,4 @@
 
-// Sub-Namespace Interactors of Core
-MTG.Core.Interactors = {};
-
 
 
 /*
