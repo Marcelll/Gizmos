@@ -4,6 +4,8 @@ MTG                                         = {};
 MTG.Core                                    = {};
 // All interactors including BaseInteractor class
 MTG.Interactors                             = {};
+// Cache funcs for currently existing Interactors
+MTG.Interactors.Cache                       = {};
 // Functions that are required in different files
 MTG.Util                                    = {};
 
