@@ -2,17 +2,17 @@
  * This is only a test interactor that isn't implemented. It only shows
  * how to implement a interactor component generally
  */
-Core.Interactors.Interactor_Test = function(){}
-Core.Interactors.Interactor_Test.prototype = new Core.Interactors.BaseInteractor();
-Core.Interactors.Interactor_Test.prototype.constructor = Core.Interactors.Interactor_Test;
-Core.Interactors.Interactor_Test.prototype.transformation = function(evt){
+MTG.Core.Interactors.Interactor_Test = function(){}
+MTG.Core.Interactors.Interactor_Test.prototype = new MTG.Core.Interactors.BaseInteractor();
+MTG.Core.Interactors.Interactor_Test.prototype.constructor = MTG.Core.Interactors.Interactor_Test;
+MTG.Core.Interactors.Interactor_Test.prototype.transformation = function(evt){
     console.log("Test Interactor is not implemented yet");
 };
 
 /*
  * This is only a test interactor
  */
-Core.Interactors.Interactor_Test = function(evt){
+MTG.Core.Interactors.Interactor_Test = function(evt){
 
 //    var parameters = {Minimum: 0.0, Maximum: 100.0, Snap: 5.0};
 //
@@ -78,7 +78,7 @@ Core.Interactors.Interactor_Test = function(evt){
 
 };
 
-Core.Interactors.Interactor_Test = function(evt){
+MTG.Core.Interactors.Interactor_Test = function(evt){
 
 //    var parameters = {Minimum: 0.0, Maximum: 100.0, Snap: 5.0};
 //

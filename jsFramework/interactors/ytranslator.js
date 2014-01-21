@@ -5,10 +5,10 @@
 /*
  * Translates the visualized gizmo and a selected component in y-direction
  */
-Core.Interactors.YTranslator = function(){};
-Core.Interactors.YTranslator.prototype = new Core.Interactors.BaseInteractor();
-Core.Interactors.YTranslator.prototype.constructor = Core.Interactors.YTranslator;
-Core.Interactors.YTranslator.prototype.transformation = function(evt){
+MTG.Core.Interactors.YTranslator = function(){};
+MTG.Core.Interactors.YTranslator.prototype = new MTG.Core.Interactors.BaseInteractor();
+MTG.Core.Interactors.YTranslator.prototype.constructor = MTG.Core.Interactors.YTranslator;
+MTG.Core.Interactors.YTranslator.prototype.transformation = function(evt){
     var transOld = x3dom.fields.SFVec3f.parse(this.transform.getAttribute("translation"));
     var translationDir = this.mousePos.x - evt.layerX;
     if ((translationDir > 0) ||

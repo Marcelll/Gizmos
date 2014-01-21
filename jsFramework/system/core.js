@@ -1,22 +1,18 @@
 
-// Namespace Core
-Core                                     = {};
-// Sub-Namespace InteractorHandler of Core
-Core.InteractorHandler                   = {};
 // Currently active interactor
-Core.InteractorHandler.currentInteractor = null;
+MTG.Core.InteractorHandler.currentInteractor = null;
 // List of all registered interactors
-Core.InteractorHandler.interactorList    = [];
+MTG.Core.InteractorHandler.interactorList    = [];
 
 /*
  * Adds the passed interactor to the interactor-list and stores it into
  * the variable: Core.InteractorHandler.currentInteractor
  * @param interactor instance of an interactor
  */
-Core.InteractorHandler.interactorList.AddInteractor = function(interactor) {
-    Core.InteractorHandler.interactorList.push(interactor);
-    Core.InteractorHandler.currentInteractor =
-        Core.InteractorHandler.interactorList[Core.InteractorHandler.interactorList.length - 1];
+MTG.Core.InteractorHandler.interactorList.AddInteractor = function(interactor) {
+    MTG.Core.InteractorHandler.interactorList.push(interactor);
+    MTG.Core.InteractorHandler.currentInteractor =
+        MTG.Core.InteractorHandler.interactorList[MTG.Core.InteractorHandler.interactorList.length - 1];
 };
 
 /*
@@ -24,9 +20,9 @@ Core.InteractorHandler.interactorList.AddInteractor = function(interactor) {
  * @param id id of the element whose interactor should be delivered
  * @returns true if exists, else false
  */
-Core.InteractorHandler.interactorList.Contains = function(id) {
-    for (var i = 0; i < Core.InteractorHandler.interactorList.length; i++){
-        if (Core.InteractorHandler.interactorList[i].parameters.id === id){
+MTG.Core.InteractorHandler.interactorList.Contains = function(id) {
+    for (var i = 0; i < MTG.Core.InteractorHandler.interactorList.length; i++){
+        if (MTG.Core.InteractorHandler.interactorList[i].parameters.id === id){
             return true;
         }
     }
@@ -39,10 +35,10 @@ Core.InteractorHandler.interactorList.Contains = function(id) {
  * @param id id of the element whose interactor should be delivered
  * @returns interactor if exists, else null
  */
-Core.InteractorHandler.interactorList.GetInteractor = function(id) {
-    for (var i = 0; i < Core.InteractorHandler.interactorList.length; i++){
-        if (Core.InteractorHandler.interactorList[i].parameters.id === id){
-            return Core.InteractorHandler.interactorList[i];
+MTG.Core.InteractorHandler.interactorList.GetInteractor = function(id) {
+    for (var i = 0; i < MTG.Core.InteractorHandler.interactorList.length; i++){
+        if (MTG.Core.InteractorHandler.interactorList[i].parameters.id === id){
+            return MTG.Core.InteractorHandler.interactorList[i];
         }
     }
 
@@ -54,12 +50,12 @@ Core.InteractorHandler.interactorList.GetInteractor = function(id) {
  * @param parameters object that has all parameters of the interactor (id must always be set)
  *        parameters = {id: 'id of element', ...}
  */
-Core.CreateInteractor = function(parameters){
-    if (!Core.InteractorHandler.interactorList.Contains(parameters.id)) {
+MTG.Core.CreateInteractor = function(parameters){
+    if (!MTG.Core.InteractorHandler.interactorList.Contains(parameters.id)) {
         var params = {parameters: {id: parameters.id}};
-        Core.InteractorHandler.interactorList.AddInteractor(Util.ReflectObject(parameters.interactor, params));
-        Core.InteractorHandler.currentInteractor.Super();
+        MTG.Core.InteractorHandler.interactorList.AddInteractor(MTG.Util.ReflectObject(parameters.interactor, params));
+        MTG.Core.InteractorHandler.currentInteractor.Super();
     }
-    Core.InteractorHandler.currentInteractor = Core.InteractorHandler.interactorList.GetInteractor(parameters.id);
-    Core.InteractorHandler.currentInteractor.AddEventListeners();
+    MTG.Core.InteractorHandler.currentInteractor = MTG.Core.InteractorHandler.interactorList.GetInteractor(parameters.id);
+    MTG.Core.InteractorHandler.currentInteractor.AddEventListeners();
 };

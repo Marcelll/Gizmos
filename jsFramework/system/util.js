@@ -1,5 +1,5 @@
 
-Util = {};
+
 
 /*
  * Creates an object of the required name and sets all parameters
@@ -12,7 +12,7 @@ Util = {};
  * 
  * @return Object of the required class  
  */
-Util.ReflectObject = function(className, params) {
+MTG.Util.ReflectObject = function(className, params) {
     // Split the String on . to get the hierarchie
     var classHierarchie = className.split('.');
 

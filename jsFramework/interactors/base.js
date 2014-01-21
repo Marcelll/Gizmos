@@ -1,6 +1,6 @@
 
 // Sub-Namespace Interactors of Core
-Core.Interactors = {};
+MTG.Core.Interactors = {};
 
 
 
@@ -9,14 +9,14 @@ Core.Interactors = {};
  * standard interaction and handles the synchronization with the x3dom
  * default interactor
  */
-Core.Interactors.BaseInteractor = function() {
+MTG.Core.Interactors.BaseInteractor = function() {
 
 };
 
 /*
  * Initializes all interactor components
  */
-Core.Interactors.BaseInteractor.prototype.Super = function() {
+MTG.Core.Interactors.BaseInteractor.prototype.Super = function() {
     this.element        = document.getElementById(this.parameters.id);
     this.elementMat     = document.getElementById(this.parameters.id.substr(7, this.parameters.id.length) + "__highlight");
     this.x3d            = document.getElementsByTagName("x3d")[0];
@@ -31,7 +31,7 @@ Core.Interactors.BaseInteractor.prototype.Super = function() {
 /*
  * Adds all event listeners that are required if an interactor is getting activated
  */
-Core.Interactors.BaseInteractor.prototype.AddEventListeners = function() {
+MTG.Core.Interactors.BaseInteractor.prototype.AddEventListeners = function() {
     this.element.addEventListener('mousedown', this.elementMouseDown, true);
     this.element.addEventListener('mousemove', this.elementMouseMove, true);
     this.element.addEventListener('mouseup', this.elementMouseUp, true);
@@ -48,7 +48,7 @@ Core.Interactors.BaseInteractor.prototype.AddEventListeners = function() {
  * Removes all event listeners that were required during interaction
  * if the interactor is getting deactivated
  */
-Core.Interactors.BaseInteractor.prototype.RemoveEventListeners = function() {
+MTG.Core.Interactors.BaseInteractor.prototype.RemoveEventListeners = function() {
     this.element.removeEventListener('mousedown', this.elementMouseDown, true);
     this.element.removeEventListener('mousemove', this.elementMouseMove, true);
     this.element.removeEventListener('mouseup', this.elementMouseUp, true);
@@ -62,7 +62,7 @@ Core.Interactors.BaseInteractor.prototype.RemoveEventListeners = function() {
 /*
  * Handling of mousedown-event on element itself
  */
-Core.Interactors.BaseInteractor.prototype.elementMouseDown = function(evt) {
+MTG.Core.Interactors.BaseInteractor.prototype.elementMouseDown = function(evt) {
     this.interactor.mousePos.x = evt.layerX;
     this.interactor.mousePos.y = evt.layerY;
     this.interactor.elementMat.setAttribute("diffuseColor", this.interactor.highlightCol);
@@ -71,7 +71,7 @@ Core.Interactors.BaseInteractor.prototype.elementMouseDown = function(evt) {
 /*
  * Handling of mousemove-event on element itself
  */
-Core.Interactors.BaseInteractor.prototype.elementMouseMove = function(evt) {
+MTG.Core.Interactors.BaseInteractor.prototype.elementMouseMove = function(evt) {
     if (evt.button === 1){
         this.interactor.transformation(evt);
     }
@@ -80,7 +80,7 @@ Core.Interactors.BaseInteractor.prototype.elementMouseMove = function(evt) {
 /*
  * Handling of mouseup-event on element itself
  */
-Core.Interactors.BaseInteractor.prototype.elementMouseUp = function(evt) {
+MTG.Core.Interactors.BaseInteractor.prototype.elementMouseUp = function(evt) {
     this.interactor.RemoveEventListeners();
     this.interactor.elementMat.setAttribute("diffuseColor", this.interactor.defaultCol);
 };
@@ -88,7 +88,7 @@ Core.Interactors.BaseInteractor.prototype.elementMouseUp = function(evt) {
 /*
  * Handling of mousemove-event on x3d container
  */
-Core.Interactors.BaseInteractor.prototype.x3dMouseMove = function(evt) {
+MTG.Core.Interactors.BaseInteractor.prototype.x3dMouseMove = function(evt) {
     if (evt.button === 0 && this.interactor.drag) {
         this.interactor.transformation(evt);
     }
@@ -97,7 +97,7 @@ Core.Interactors.BaseInteractor.prototype.x3dMouseMove = function(evt) {
 /*
  * Handling of mouseup-event on x3d container
  */
-Core.Interactors.BaseInteractor.prototype.x3dMouseUp = function(evt) {
+MTG.Core.Interactors.BaseInteractor.prototype.x3dMouseUp = function(evt) {
     this.interactor.RemoveEventListeners();
     this.interactor.elementMat.setAttribute("diffuseColor", this.interactor.defaultCol);
 };
@@ -106,7 +106,7 @@ Core.Interactors.BaseInteractor.prototype.x3dMouseUp = function(evt) {
  * Basic transformation method that is executed if nothing is overwritten.
  * This method should be overwritten in every implemented interactor
  */
-Core.Interactors.BaseInteractor.prototype.transformation = function(evt) {
+MTG.Core.Interactors.BaseInteractor.prototype.transformation = function(evt) {
     console.log("The function transformation has to \n\
                      be overwritten for functionality!");
 };
