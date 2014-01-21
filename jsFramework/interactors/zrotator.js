@@ -5,10 +5,10 @@
 /*
  * Rotates the visualized gizmo and a selected component around the z-axis
  */
-MTG.Core.Interactors.ZRotator = function(){};
-MTG.Core.Interactors.ZRotator.prototype = new MTG.Core.Interactors.BaseInteractor();
-MTG.Core.Interactors.ZRotator.prototype.constructor = MTG.Core.Interactors.ZRotator;
-MTG.Core.Interactors.ZRotator.prototype.transformation = function(evt){
+MTG.Interactors.ZRotator = function(){};
+MTG.Interactors.ZRotator.prototype = new MTG.Interactors.BaseInteractor();
+MTG.Interactors.ZRotator.prototype.constructor = MTG.Interactors.ZRotator;
+MTG.Interactors.ZRotator.prototype.transformation = function(evt){
     var transOld = x3dom.fields.SFVec4f.parse(this.transform.getAttribute("rotation"));
     var translationDir = -Math.floor((this.mousePos.x - evt.layerX)) / 180 * Math.PI;
     transOld.x = 0;

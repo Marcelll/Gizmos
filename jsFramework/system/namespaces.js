@@ -2,10 +2,8 @@
 MTG                                         = {};
 // Core functionality (controller)
 MTG.Core                                    = {};
-// Handler functionality to cache interactors
-MTG.Core.InteractorHandler                  = {};
 // All interactors including BaseInteractor class
-MTG.Core.Interactors                        = {};
+MTG.Interactors                             = {};
 // Functions that are required in different files
 MTG.Util                                    = {};
 
