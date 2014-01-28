@@ -13,7 +13,7 @@
                             <inline DEF='rotationX' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.XRotator", id: this.id});' nameSpaceName="rotationX" mapDefToId="true" url="gizmos/rotation_x.x3d"></inline>
                         </transform>
                         <transform>
-                            <inline DEF='scaleX' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.Interactor_Test", id: this.id});' nameSpaceName="scaleX" mapDefToId="true" url="gizmos/scale_x.x3d"></inline>
+                            <inline DEF='scaleX' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.XScalor", id: this.id});' nameSpaceName="scaleX" mapDefToId="true" url="gizmos/scale_x.x3d"></inline>
                         </transform>
                     </Group>
                 </transform>
@@ -26,7 +26,7 @@
                            <inline DEF='rotationY' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.YRotator", id: this.id});' nameSpaceName="rotationY" mapDefToId="true" url="gizmos/rotation_y.x3d"></inline>
                        </transform>
                        <transform>
-                           <inline DEF='scaleY' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.Interactor_Test", id: this.id});' nameSpaceName="scaleY" mapDefToId="true" url="gizmos/scale_y.x3d"></inline>
+                           <inline DEF='scaleY' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.YScalor", id: this.id});' nameSpaceName="scaleY" mapDefToId="true" url="gizmos/scale_y.x3d"></inline>
                        </transform>
                     </Group>
                  </transform>
@@ -39,7 +39,7 @@
                            <inline DEF='rotationZ' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.ZRotator", id: this.id});' nameSpaceName="rotationZ" mapDefToId="true" url="gizmos/rotation_z.x3d"></inline>
                        </transform>
                        <transform>
-                           <inline DEF='scaleZ' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.Interactor_Test", id: this.id});' nameSpaceName="scaleZ" mapDefToId="true" url="gizmos/scale_z.x3d"></inline>
+                           <inline DEF='scaleZ' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.ZScalor", id: this.id});' nameSpaceName="scaleZ" mapDefToId="true" url="gizmos/scale_z.x3d"></inline>
                        </transform>
                     </Group>
                  </transform>

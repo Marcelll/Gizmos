@@ -1,114 +1,108 @@
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-<meta content="utf-8" http-equiv="encoding">
+    <meta content="utf-8" http-equiv="encoding">
 
-<html xmlns='http://www.w3.org/1999/xhtml'>
- 
-<head>
-    <title>X3DOM Gizmos Viewer</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+        <html xmlns='http://www.w3.org/1999/xhtml'>
 
-    <!-- SYSTEM -->
-    <script type="text/javascript" src="jsFramework/system/namespaces.js"></script>
-    <script type="text/javascript" src="jsFramework/system/cache.js"></script>
-    <script type="text/javascript" src="jsFramework/system/core.js"></script>
-    <script type="text/javascript" src="jsFramework/system/util.js"></script>
+            <head>
+                <title>X3DOM Gizmos Viewer</title>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" />
+                <meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
 
-    <!-- INTERACTORS -->
-    <script type="text/javascript" src="jsFramework/interactors/base.js"></script>
-    <script type="text/javascript" src="jsFramework/interactors/xtranslator.js"></script>
-    <script type="text/javascript" src="jsFramework/interactors/ytranslator.js"></script>
-    <script type="text/javascript" src="jsFramework/interactors/ztranslator.js"></script>
-    <script type="text/javascript" src="jsFramework/interactors/xrotator.js"></script>
-    <script type="text/javascript" src="jsFramework/interactors/yrotator.js"></script>
-    <script type="text/javascript" src="jsFramework/interactors/zrotator.js"></script>
+                <!-- SYSTEM -->
+                <script type="text/javascript" src="jsFramework/system/namespaces.js"></script>
+                <script type="text/javascript" src="jsFramework/system/cache.js"></script>
+                <script type="text/javascript" src="jsFramework/system/core.js"></script>
+                <script type="text/javascript" src="jsFramework/system/gizmo.js"></script>
+                <script type="text/javascript" src="jsFramework/system/util.js"></script>
 
-    
-    <!-- X3DOM -->
-    <link rel="stylesheet" type="text/css" href="http://www.x3dom.org/download/x3dom.css" /> 
-    <link rel='stylesheet' type='text/css' href='media/css/examples.css'>
-    <link rel='stylesheet' type='text/css' href='media/font/orbitron.css'>
-    <script type="text/javascript" src="http://www.x3dom.org/download/dev/x3dom.js"></script>
-    <style>
-        x3d { margin-right:10px; margin-bottom:10px; }
-        .webfont {font-family:'Orbitron';}
-        .component {
-            float:left; 
-            width: 80px; 
-            height: 80px; 
-            margin: 5px; 
-            border: solid 3px lightgray;
-        }
-        
-        .component:hover {
-            border: solid 3px darkorange;
-            cursor: pointer;
-        }
-    </style>
-    <script type="text/javascript">
+                <!-- INTERACTORS -->
+                <script type="text/javascript" src="jsFramework/interactors/base.js"></script>
+                <script type="text/javascript" src="jsFramework/interactors/xtranslator.js"></script>
+                <script type="text/javascript" src="jsFramework/interactors/ytranslator.js"></script>
+                <script type="text/javascript" src="jsFramework/interactors/ztranslator.js"></script>
+                <script type="text/javascript" src="jsFramework/interactors/xrotator.js"></script>
+                <script type="text/javascript" src="jsFramework/interactors/yrotator.js"></script>
+                <script type="text/javascript" src="jsFramework/interactors/zrotator.js"></script>
+                <script type="text/javascript" src="jsFramework/interactors/xscalor.js"></script>
+                <script type="text/javascript" src="jsFramework/interactors/yscalor.js"></script>
+                <script type="text/javascript" src="jsFramework/interactors/zscalor.js"></script>
 
-        function createGizmo(){
-            var url = "gizmos.x3d";              
-            var inline = document.createElement("Inline");
-            inline.setAttribute("id", "gizmo");
-            inline.setAttribute("url", url);
-            inline.setAttribute("nameSpaceName", "gizmo");
-            inline.setAttribute("mapDefToID", true);
-            inline.setAttribute("render", true);
-            var scene = document.getElementById("scene");
-            scene.appendChild(inline);
-            };
-            
-         function createCube(){
-            var url = "models/cube/standard.x3d";              
-            var inline = document.createElement("Inline");
-            inline.setAttribute("url", url);
-            inline.setAttribute("nameSpaceName", "cube");
-            inline.setAttribute("mapDefToID", true);
-            inline.setAttribute("render", true);
-            var scene = document.getElementById("scene");
-            scene.appendChild(inline);
-            };
 
-    </script>
+                <!-- X3DOM -->
+                <link rel="stylesheet" type="text/css" href="http://www.x3dom.org/download/x3dom.css" /> 
+                <link rel='stylesheet' type='text/css' href='media/css/examples.css'>
+                    <link rel='stylesheet' type='text/css' href='media/font/orbitron.css'>
+                        <script type="text/javascript" src="http://www.x3dom.org/download/dev/x3dom.js"></script>
+                        <style>
+                            x3d { margin-right:10px; margin-bottom:10px; }
+                            .webfont {font-family:'Orbitron';}
+                            .component {
+                                float:left; 
+                                width: 80px; 
+                                height: 80px; 
+                                margin: 5px; 
+                                border: solid 3px lightgray;
+                            }
 
-    <style>
-        
-        .component {
-            float:left; 
-            width: 80px; 
-            height: 80px; 
-            margin: 5px; 
-            border: solid 3px lightgray;
-        }
-        
-        .component:hover {
-            border: solid 3px darkorange;
-            cursor: pointer;
-        }
-    </style>
+                            .component:hover {
+                                border: solid 3px darkorange;
+                                cursor: pointer;
+                            }
+                        </style>
+                        <script type="text/javascript">
 
-</head>
-    
-<body>
-    <x3d id="x3d" width="800" height="600">
-        <scene id="scene" DEF='scene' style="float:left;">
-            <NavigationInfo type="examine"></navigationinfo>
-            <Viewpoint position="17.47922 15.18714 5.76324" orientation="0.27693 0.61847 0.73539 2.44366" 
-                       zNear="0.1" zFar="10000" description="defaultX3DViewpointNode">
-            </Viewpoint>
-            
-            
-            <!--<inline id="gizmo" render="true" nameSpaceName="gizmo" mapDefToId="true" url="gizmos.x3d"></inline>-->
-        </scene>
-    </x3d>
-    <div style="float:left; width: 200px; height: 350px; background-color: lightgray; border: solid 1px #414141; margin-left: 2px;">
-        <div style="float:left; width: 90%; height: 20px; background-color: #414141; padding: 10px; font-family: Calibri; font-size: 18px; color: #fff;">Component Browser</div>
-        <img src="models/cube/cube.jpg" class="component" onclick="createCube();"/>
-        <img src="gizmos.jpg" class="component" onclick="createGizmo();"/>
-<!--        <img src="desk.jpg" class="component" onclick="createDesk();"/>-->
-    </div>
-</body>
+                            window.onload = function() {
+                                var scene = document.getElementById("scene");                               
+                                var transformCube = document.createElement("Transform");
+                                transformCube.setAttribute("translation", "1 4 1");
+                                var inlineCube = document.createElement("Inline");
+                                var url = "models/cube/standard.x3d";
+                                inlineCube.setAttribute("id", "cube");
+                                inlineCube.setAttribute("selectable", "parent")
+                                inlineCube.setAttribute("url", url);
+                                inlineCube.setAttribute("nameSpaceName", "cube");
+                                inlineCube.setAttribute("onclick", "MTG.Core.SelectObject(this, true);");
+                                inlineCube.setAttribute("mapDefToID", true);
+                                inlineCube.setAttribute("render", true);
+                                transformCube.appendChild(inlineCube);
+                                scene.appendChild(transformCube);
+                            };
 
-</html>
+                        </script>
+
+                        <style>
+
+                            .component {
+                                float:left; 
+                                width: 80px; 
+                                height: 80px; 
+                                margin: 5px; 
+                                border: solid 3px lightgray;
+                            }
+
+                            .component:hover {
+                                border: solid 3px darkorange;
+                                cursor: pointer;
+                            }
+                        </style>
+
+                        </head>
+
+                        <body>
+                            <x3d id="x3d" width="800" height="600">
+                                <scene id="scene" DEF='scene' style="float:left;">
+                                    <NavigationInfo type="examine"></navigationinfo>
+                                    <Viewpoint position="1.50000 4.50000 29.27437" orientation="0.00000 0.00000 0.00000 0.00000" 
+                                            zNear="3.15464" zFar="390.15464" description="defaultX3DViewpointNode">
+                                    </Viewpoint>
+                                </scene>
+                            </x3d>
+                            <div style="float:left; width: 200px; height: 350px; background-color: lightgray; border: solid 1px #414141; margin-left: 2px;">
+                                <div style="float:left; width: 90%; height: 20px; background-color: #414141; padding: 10px; font-family: Calibri; font-size: 18px; color: #fff;">Component Browser</div>
+                                <img src="models/cube/cube.jpg" class="component" onclick=""/>
+                                <img src="gizmos.jpg" class="component" onclick=""/>
+                            </div>
+                        </body>
+
+                        </html>

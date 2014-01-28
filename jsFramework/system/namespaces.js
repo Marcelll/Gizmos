@@ -8,4 +8,5 @@ MTG.Interactors                             = {};
 MTG.Interactors.Cache                       = {};
 // Functions that are required in different files
 MTG.Util                                    = {};
-
+// Functions to create, append and remove a gizmo
+MTG.Gizmo 									= {};
