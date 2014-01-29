@@ -60,13 +60,10 @@ MTG.Gizmo.TreePositioning.prototype.TransformTo = function(element, target) {
 /*
  *
  */
-MTG.Gizmo.TreePositioning.prototype.GetMiddleOf = function(element) {
-    var middle = null;
+MTG.Gizmo.TreePositioning.prototype.GetCenterOf = function(element) {
+    var center = null;
 
-    
-    var translation = element.getAttribute("translation");
-    var rotation = element.getAttribute("rotation");
-    var scale = element.getAttribute("scale");
+    // needs some functionality to get the center of an object
 
-    return middle;
+    return center;
 };
