@@ -60,7 +60,7 @@
                                 var inlineCube = document.createElement("Inline");
                                 var url = "models/cube/standard.x3d";
                                 inlineCube.setAttribute("id", "cube");
-                                inlineCube.setAttribute("selectable", "parent")
+                                inlineCube.setAttribute("selectable", "parent");
                                 inlineCube.setAttribute("url", url);
                                 inlineCube.setAttribute("nameSpaceName", "cube");
                                 inlineCube.setAttribute("onclick", "MTG.Core.SelectObject(this, true);");
@@ -97,6 +97,14 @@
                                     <Viewpoint position="1.50000 4.50000 29.27437" orientation="0.00000 0.00000 0.00000 0.00000" 
                                             zNear="3.15464" zFar="390.15464" description="defaultX3DViewpointNode">
                                     </Viewpoint>
+                                    
+                                    <shape onclick="alert('test');">
+                                        <appearance>
+                                            <material diffuseColor="0 1 1" transparency="0.5"></material>
+                                        </appearance>
+                                        <cone></cone>
+                                    </shape>
+                                    
                                 </scene>
                             </x3d>
                             <div style="float:left; width: 200px; height: 350px; background-color: lightgray; border: solid 1px #414141; margin-left: 2px;">

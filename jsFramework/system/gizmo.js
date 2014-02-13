@@ -13,12 +13,9 @@ MTG.Gizmo.TreePositioning = function(element, id, url, render){
  */
 MTG.Gizmo.TreePositioning.prototype.Create = function(element, id, url, render) {
     this.gizmoID = id;
-    var scene = document.getElementsByTagName("scene")[0];
     var gizmoTransform = document.createElement("Transform");
     var elementTransform = element.parentNode;
     var gizmoInline = document.createElement("Inline");
-
-    this.TransformTo(gizmoTransform, elementTransform);
 
     gizmoInline.setAttribute("id", id);
     gizmoInline.setAttribute("url", url);
@@ -29,6 +26,8 @@ MTG.Gizmo.TreePositioning.prototype.Create = function(element, id, url, render) 
     
     gizmoTransform.appendChild(gizmoInline);
     element.parentNode.parentNode.appendChild(gizmoTransform);
+    
+    this.TransformTo(gizmoTransform, elementTransform);
 };
 
 /*
@@ -50,10 +49,8 @@ MTG.Gizmo.TreePositioning.prototype.Remove = function() {
 MTG.Gizmo.TreePositioning.prototype.TransformTo = function(element, target) {
     var translation = target.getAttribute("translation");
     var rotation = target.getAttribute("rotation");
-    var scale = target.getAttribute("scale");
 
     element.setAttribute("translation", translation);
     element.setAttribute("rotation", rotation);
-    element.setAttribute("scale", scale);
 };
 

@@ -17,6 +17,7 @@ MTG.Core.CreateInteractor = function(parameters) {
 };
 
 MTG.Core.SelectObject = function(element, bool) {
+    
     if (!MTG.Gizmo.TREE_POS) {
         MTG.Gizmo.TREE_POS = new MTG.Gizmo.TreePositioning(element, "gizmo", "gizmos.x3d", true);
     }

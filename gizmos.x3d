@@ -2,48 +2,46 @@
 <!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.0//EN" "http://www.web3d.org/specifications/x3d-3.0.dtd">
 <X3D xmlns:xsd='http://www.w3.org/2001/XMLSchema-instance' profile='Full' version='3.0' xsd:noNamespaceSchemaLocation='http://www.web3d.org/specifications/x3d-3.0.xsd'>
   <Scene DEF='scene'>
-      <transform DEF='TRANSFORMATION'>
-            <Group DEF='AXIS_GIZMOS'>
-               <transform>
-                    <Group DEF='GIZMOS_X'>
-                        <transform>
-                            <inline DEF='translationX' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.XTranslator", id: this.id});' nameSpaceName="translationX" mapDefToId="true" url="gizmos/translation_x.x3d"></inline>
-                        </transform>
-                        <transform>
-                            <inline DEF='rotationX' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.XRotator", id: this.id});' nameSpaceName="rotationX" mapDefToId="true" url="gizmos/rotation_x.x3d"></inline>
-                        </transform>
-                        <transform>
-                            <inline DEF='scaleX' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.XScalor", id: this.id});' nameSpaceName="scaleX" mapDefToId="true" url="gizmos/scale_x.x3d"></inline>
-                        </transform>
-                    </Group>
+    <Group DEF='AXIS_GIZMOS'>
+       <transform>
+            <Group DEF='GIZMOS_X'>
+                <transform>
+                    <inline DEF='translationX' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.XTranslator", id: this.id});' nameSpaceName="translationX" mapDefToId="true" url="gizmos/translation_x.x3d"></inline>
                 </transform>
                 <transform>
-                    <Group DEF='GIZMOS_Y'>
-                       <transform>
-                           <inline DEF='translationY' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.YTranslator", id: this.id});' nameSpaceName="translationY" mapDefToId="true" url="gizmos/translation_y.x3d"></inline>
-                       </transform>
-                       <transform>
-                           <inline DEF='rotationY' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.YRotator", id: this.id});' nameSpaceName="rotationY" mapDefToId="true" url="gizmos/rotation_y.x3d"></inline>
-                       </transform>
-                       <transform>
-                           <inline DEF='scaleY' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.YScalor", id: this.id});' nameSpaceName="scaleY" mapDefToId="true" url="gizmos/scale_y.x3d"></inline>
-                       </transform>
-                    </Group>
-                 </transform>
-                 <transform>
-                    <Group DEF='GIZMOS_Z'>
-                       <transform>
-                           <inline DEF='translationZ' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.ZTranslator", id: this.id});' nameSpaceName="translationZ" mapDefToId="true" url="gizmos/translation_z.x3d"></inline>
-                       </transform>
-                       <transform>
-                           <inline DEF='rotationZ' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.ZRotator", id: this.id});' nameSpaceName="rotationZ" mapDefToId="true" url="gizmos/rotation_z.x3d"></inline>
-                       </transform>
-                       <transform>
-                           <inline DEF='scaleZ' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.ZScalor", id: this.id});' nameSpaceName="scaleZ" mapDefToId="true" url="gizmos/scale_z.x3d"></inline>
-                       </transform>
-                    </Group>
-                 </transform>
+                    <inline DEF='rotationX' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.XRotator", id: this.id});' nameSpaceName="rotationX" mapDefToId="true" url="gizmos/rotation_x.x3d"></inline>
+                </transform>
+                <transform>
+                    <inline DEF='scaleX' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.XScalor", id: this.id});' nameSpaceName="scaleX" mapDefToId="true" url="gizmos/scale_x.x3d"></inline>
+                </transform>
             </Group>
         </transform>
+        <transform>
+            <Group DEF='GIZMOS_Y'>
+               <transform>
+                   <inline DEF='translationY' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.YTranslator", id: this.id});' nameSpaceName="translationY" mapDefToId="true" url="gizmos/translation_y.x3d"></inline>
+               </transform>
+               <transform>
+                   <inline DEF='rotationY' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.YRotator", id: this.id});' nameSpaceName="rotationY" mapDefToId="true" url="gizmos/rotation_y.x3d"></inline>
+               </transform>
+               <transform>
+                   <inline DEF='scaleY' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.YScalor", id: this.id});' nameSpaceName="scaleY" mapDefToId="true" url="gizmos/scale_y.x3d"></inline>
+               </transform>
+            </Group>
+         </transform>
+         <transform>
+            <Group DEF='GIZMOS_Z'>
+               <transform>
+                   <inline DEF='translationZ' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.ZTranslator", id: this.id});' nameSpaceName="translationZ" mapDefToId="true" url="gizmos/translation_z.x3d"></inline>
+               </transform>
+               <transform>
+                   <inline DEF='rotationZ' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.ZRotator", id: this.id});' nameSpaceName="rotationZ" mapDefToId="true" url="gizmos/rotation_z.x3d"></inline>
+               </transform>
+               <transform>
+                   <inline DEF='scaleZ' onmousedown='MTG.Core.CreateInteractor({interactor: "MTG.Interactors.ZScalor", id: this.id});' nameSpaceName="scaleZ" mapDefToId="true" url="gizmos/scale_z.x3d"></inline>
+               </transform>
+            </Group>
+         </transform>
+    </Group>
   </Scene>
 </X3D>
