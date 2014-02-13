@@ -63,15 +63,7 @@ MTG.Interactors.Cache.InteractorList.prototype.RemoveInteractor = function(id) {
 * Clears the interactor-list
 */
 MTG.Interactors.Cache.InteractorList.prototype.Clear = function() {
-    /*for (var i = 0; i < MTG.Interactors.Cache.interactorList.length; i++) {
-        MTG.Interactors.Cache.interactorList.pop();
-        MTG.Interactors.Cache.interactorList.Clear();
-    }*/
     this.list = [];
-    // for (var i = 0; i < MTG.Interactors.Cache.interactorList.length; i++){
-    //     MTG.Interactors.Cache.interactorList.splice(i,1);
-    // }
-    console.dir(this.list);
 };
 
 MTG.Interactors.Cache.interactorList = new MTG.Interactors.Cache.InteractorList();

@@ -16,7 +16,7 @@ MTG.Interactors.YRotator.prototype.transformation = function(evt){
     transOld.z = 0;
     transOld.w += translationDir;
     this.transform.setAttribute("rotation", transOld.toString());
-    //if (this.parameters.Center !== undefined)
-    //    this.transform.setAttribute("center", new x3dom.fields.SFVec3f(this.parameters.Center.x, this.parameters.Center.y, this.parameters.Center.z));
+    var elementTransform = document.getElementById("gizmo");
+    elementTransform.elementTransform.setAttribute("rotation", transOld.toString());
     this.mousePos.x = evt.layerX;
 };

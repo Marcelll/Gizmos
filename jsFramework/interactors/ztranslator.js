@@ -15,6 +15,8 @@ MTG.Interactors.ZTranslator.prototype.transformation = function(evt){
         (translationDir <= 0)){
         transOld.z += translationDir / 10;
         this.transform.setAttribute("translation", transOld.toString());
+        var elementTransform = document.getElementById("gizmo");
+        elementTransform.elementTransform.setAttribute("translation", transOld.toString());
     }
     this.mousePos.x = evt.layerX;
 };

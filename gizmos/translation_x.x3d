@@ -4,30 +4,6 @@
   <Scene DEF='scene'>
      <transform rotation="0 0 1 -1.57079632">
         <Group DEF='X_AXIS'>
-<!--            <matrixtransform id="root_transform">
-		 <transform  translation="0 0 20" scale="50 50 50"
-		 rotation="0 1 0 3.145">
-			 <transform def="earth" rotation="1 0 0 -1.57">
-				 <shape>
-					 <appearance>
-						 <imageTexture url="some_texture.jpg">
-						 </imageTexture>
-					 </appearance>
-					 <sphere></sphere>
-				 </shape>
-			 </transform>
-			 <transform def="clouds" rotation="1 0 0 -1.57"
-			 scale="1.1 1.1 1.1">
-				 <shape>
-					 <appearance>
-						 <imageTexture url="some_texture2.jpg">
-						 </imageTexture>
-					 </appearance>
-					 <sphere></sphere>
-				 </shape>
-			 </transform>
-		 </transform>
-	 </matrixtransform>-->
              <transform translation="0 8 0" rotation="0 0 0 0" scale="1 2 1">
                 <shape DEF='coneShapeX'>
                   <appearance>

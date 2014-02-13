@@ -8,7 +8,6 @@ MTG.Gizmo.TreePositioning = function(element, id, url, render){
     this.Create(element, id, url, render);
 };
 
-
 /*
  *
  */
@@ -26,7 +25,8 @@ MTG.Gizmo.TreePositioning.prototype.Create = function(element, id, url, render) 
     gizmoInline.setAttribute("nameSpaceName", id);
     gizmoInline.setAttribute("mapDefToID", true);
     gizmoInline.setAttribute("render", render);
-
+    gizmoInline.elementTransform = elementTransform;
+    
     gizmoTransform.appendChild(gizmoInline);
     element.parentNode.parentNode.appendChild(gizmoTransform);
 };
@@ -57,13 +57,3 @@ MTG.Gizmo.TreePositioning.prototype.TransformTo = function(element, target) {
     element.setAttribute("scale", scale);
 };
 
-/*
- *
- */
-MTG.Gizmo.TreePositioning.prototype.GetCenterOf = function(element) {
-    var center = null;
-
-    // needs some functionality to get the center of an object
-
-    return center;
-};
